@@ -1,0 +1,186 @@
+:root {
+  --gradient: linear-gradient(180deg, #011027, #011027 150%);
+  --cupid1: #402149;
+  --cupid2: #05728e;
+  --red: rgb(255, 0, 0, 0.65);
+  --purple-ish: rgb(128 128 128);
+}
+body {
+  background: var(--gradient);
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.btn {
+  color: whitesmoke;
+  font: bold;
+  font-size: 0.75rem;
+  padding: 0.4rem 0.3rem;
+  border-radius: 1rem;
+  background-color: var(--cupid2);
+  border: none;
+  position: absolute;
+  right: 0.099rem;
+  bottom: 0.1rem;
+}
+.btn:hover {
+  background-color: black;
+  color: white;
+}
+#deleteButton:hover {
+  background-color: none;
+  color: red;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+/*the todo container*/
+.todo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border-radius: 3rem;
+  background: var(--cupid2);
+  padding: 2.5rem 1.8rem;
+  height: 60%;
+  width: 45%;
+  max-width: 20rem;
+  box-shadow: 0.08rem 0.1rem 0.1rem 0.01rem #0a94a6;
+}
+h2 {
+  height: 3rem;
+  color: white;
+  text-align: center;
+}
+.input {
+  position: relative;
+  display: flex;
+}
+.input-field {
+  width: 100%;
+  border: 0.6rem hidden #936b9f;
+  border-radius: 1rem;
+  padding: 0.5rem;
+  font-size: 0.75rem;
+  font-style: italic;
+}
+input[type="text"]::placeholder {
+  color: dimgrey;
+}
+.todo-container {
+  display: flex;
+  gap: 1rem;
+}
+ul {
+  padding: 0;
+  margin: 0;
+  overflow-y: scroll;
+}
+li {
+  display: flex;
+  flex-direction: column;
+  gap: 0.02rem;
+  padding: 0.2rem;
+  font-size: 1.2rem;
+}
+#todoList p {
+  display: flex;
+  color: white;
+  align-items: center;
+  gap: 0.5rem;
+}
+#todoList .disabled {
+  color: yellowgreen;
+}
+.disabled {
+  display: flex;
+  text-decoration: line-through;
+  color: red;
+}
+input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+}
+
+input[type="checkbox"]:before {
+  content: "\2713";
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  font-size: 0.75rem;
+  text-align: center;
+  border: 0.16rem solid white;
+  border-radius: 50%;
+  color: transparent;
+}
+
+input[type="checkbox"]:checked::before {
+  color: yellowgreen;
+  background-color: solid yellowgreen;
+  border: 0.16rem solid yellowgreen;
+  border-radius: 50%;
+}
+
+.counter {
+  border: 0.06rem solid rgb(128 128 128);
+}
+.counter-container {
+  height: 2rem;
+  display: flex;
+  justify-content: space-between;
+  color: whitesmoke;
+}
+.counter-container p {
+  align-self: center;
+}
+.counter-container button {
+  border: none;
+  background-color: transparent;
+  color: whitesmoke;
+  font-size: 1rem;
+}
+.footer {
+  display: flex;
+  gap: 1rem;
+  background-color: var(--cupid1);
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+.remark,
+inspo {
+  font-size: 0.8rem;
+}
+.remark {
+  color: ghostwhite;
+}
+.inspo {
+  color: ghostwhite;
+  font-weight: bold;
+  font-family: "Rise of Kingdom";
+}
+.scroll {
+  height: 15rem;
+  scrollbar-width: thin;
+}
+.scroll::-webkit-scrollbar {
+  width: 0.6rem;
+}
+.scroll::-webkit-scrollbar-thumb {
+  background-color: palegoldenrod;
+  border-radius: 0.5rem;
+}
+.scroll::-webkit-scrollbar-track {
+  display: none;
+}
